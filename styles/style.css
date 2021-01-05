@@ -1,0 +1,243 @@
+/* CSS Document */
+*, *::after, *::before {
+  box-sizing:border-box;
+}
+
+html {
+  font-family: futura-pt, sans-serif;
+}
+
+/***********/
+/* NAV BAR */
+/***********/
+
+header nav {
+  display: flex;
+  justify-content: space-around;
+  position: fixed;
+  width: 105vw;
+  background-color: white;
+  margin-left: -1em;
+  margin-top: -1em;
+  padding-top: 1em;
+  z-index: 10;
+}
+
+header nav a {
+  color: black;
+  text-transform: uppercase;
+}
+
+header nav h1 {
+  width: 45px;
+  height: 45px;
+  margin: 0;
+  margin-left: 12%; /* Vind nog een betere manier om het logo in het midden te krijgen */
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+}
+
+header nav ul li {
+  margin-left: 1em;
+}
+
+/*********/
+/* Intro */
+/*********/
+
+.Intro img:first-of-type {
+  width: 100.5vw;
+  height: 100vh;
+  object-fit: cover;
+  margin-left: -1em;
+}
+
+.Intro p:first-of-type {
+  font-weight: bold;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+  width: 800px;
+  position: absolute;
+  top: 6em;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.Intro button {
+  background-color: #4A90E2;
+  border-radius: 10em;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1em;
+  color: white;
+  position: absolute;
+  padding: 1em 3em 1em 3em;
+  top: 45em;
+  box-shadow: 2px 2px 4px #000000;
+}
+
+#Reserveren {
+  left: 35%;
+}
+
+#Bestellen {
+  right: 35%;
+}
+
+/***************/
+/* Onze Bieren */
+/***************/
+
+#Bieren {
+  position: relative;
+}
+
+#Bieren article {
+  position: absolute;
+  top: 10em;
+  left: 10em;
+  background-color: white;
+  width: 35em;
+  height: 35em;
+  border-radius: 2em;
+}
+
+#Bieren h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: 40px;
+  font-size: 2.5em;
+}
+
+#Bieren p {
+  font-weight: 300;
+  font-size: 1.4em;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: -15px;
+}
+
+#Bieren img {
+  width: 100.5vw;
+  height: 95vh;
+  object-fit: cover;
+  margin-left: -1em;
+  margin-top: -.5em;
+}
+
+/******************/
+/* Onze Brouwerij */
+/******************/
+
+#Brouwerij {
+  position: relative;
+}
+
+#Brouwerij article {
+  position: absolute;
+  top: 7em;
+  right: 10em;
+  background-color: white;
+  width: 35em;
+  height: 43em;
+  border-radius: 2em;
+}
+
+#Brouwerij h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: 40px;
+  font-size: 2.5em;
+}
+
+#Brouwerij p {
+  font-weight: 300;
+  font-size: 1.4em;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: -15px;
+}
+
+#Brouwerij img {
+  width: 100.5vw;
+  height: 95vh;
+  object-fit: cover;
+  margin-left: -1em;
+  margin-top: -.5em;
+}
+
+/***********/
+/* Divider */
+/***********/
+
+main > img {
+  width: 100.5vw;
+  height: 500px;
+  object-fit: contain;
+  margin-left: -1em;
+  margin-top: -.5em;
+}
+
+/****************/
+/* Onze Verhaal */
+/****************/
+
+#Verhaal {
+  position: relative;
+}
+
+#Verhaal article {
+  position: absolute;
+  top: 7em;
+  left: 10em;
+  background-color: white;
+  width: 35em;
+  height: 43em;
+  border-radius: 2em;
+}
+
+#Verhaal h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: underline;
+  margin-left: 40px;
+  font-size: 2.5em;
+}
+
+#Verhaal p {
+  font-weight: 300;
+  font-size: 1.4em;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-top: -15px;
+}
+
+#Verhaal img {
+  width: 100.5vw;
+  height: 95vh;
+  object-fit: cover;
+  margin-left: -1em;
+  margin-top: -.5em;
+}
+
+/****************/
+/* Onze Socials */
+/****************/
+
+footer h2 {
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: underline;
+  font-size: 2.5em;
+  text-align: center;
+}
