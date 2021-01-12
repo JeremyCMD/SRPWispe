@@ -1,4 +1,16 @@
 /* CSS Document */
+
+/***********/
+/* SOURCES */
+/***********/
+
+/* https://codepen.io/dylanjharris/pen/pjLJQa?editors=1100 */
+/* https://css-tricks.com/snippets/css/a-guide-to-flexbox/ */
+
+/*******/
+/* ALL */
+/*******/
+
 *, *::after, *::before {
   box-sizing:border-box;
 }
@@ -19,7 +31,7 @@ header nav {
   width: 105vw;
   background-color: white;
   margin-left: -1em;
-  margin-top: -1em;
+  margin-top: -.5em;
   padding-top: 1em;
   z-index: 10;
 }
@@ -50,25 +62,103 @@ header nav ul li {
 /* Intro */
 /*********/
 
-.Intro img:first-of-type {
+.Intro {
+  background-image: url("../images/Brewery.jpg");
+  background-size: cover;
+  background-position: 50%;
   width: 100.5vw;
-  height: 100vh;
-  object-fit: cover;
+  height: 104vh;
   margin-left: -1em;
+  margin-top: -.5em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-.Intro p:first-of-type {
+.first {
+  animation: cycleone 15s ease-in-out infinite;
   font-weight: bold;
   font-size: 45px;
   color: white;
   text-align: center;
   text-shadow: 2px 2px 4px #000000;
-  width: 800px;
+}
+
+.second {
+  animation: cycletwo 15s ease-in-out infinite;
+  font-weight: bold;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.third {
+  animation: cyclethree 15s ease-in-out infinite;
+  font-weight: bold;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.fourth {
+  animation: cyclefour 15s ease-in-out infinite;
+  font-weight: bold;
+  font-size: 45px;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.item {
   position: absolute;
-  top: 6em;
+  margin-left: auto;
+  margin-right: auto;
   left: 0;
   right: 0;
-  margin: auto;
+  top: 33%;
+  text-align: center;
+  width: 500px;
+}
+
+@keyframes cycleone {
+  0% { left: 0px; opacity: 1; z-index: 0;}
+  20% { left: 0px; opacity: 1; z-index: 0;}
+  25% { left: -500px; opacity: 0; z-index: 0;}
+  26% { left: -500px; opacity: 0; z-index: -1;}
+  27% { left: 500px; opacity: 0; z-index: -1;}
+  95% { left: 500px; opacity: 0; z-index: 0;}
+  100% { left: 0px; opacity: 1; z-index: 0;}
+}
+
+@keyframes cycletwo {
+  0% { left: 500px; opacity: 0; }
+  20% { left: 500px; opacity: 0; }
+  25% { left: 0px; opacity: 1; }
+  45% { left: 0px; opacity: 1; z-index: 0; }
+  50% { left: -500px; opacity: 0; z-index: 0; }
+  51% { left: 500px; opacity: 0; z-index: -1; }
+  100% { left: 500px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclethree {
+  0% { left: 500px; opacity: 0; }
+  45% { left: 500px; opacity: 0; z-index: -1; }
+  50% { left: 0px; opacity: 1; z-index: 0; }
+  70% { left: 0px; opacity: 1; z-index: 0; }
+  75% { left: -500px; opacity: 0; z-index: 0; }
+  76% { left: 500px; opacity: 0; z-index: -1; }
+  100% { left: 500px; opacity: 0; z-index: -1; }
+}
+
+@keyframes cyclefour {
+  0% { left: 500px; opacity: 0; z-index: -1; }
+  70% { left: 500px; opacity: 0; z-index: 0; }
+  75% { left: 0px; opacity: 1; z-index: 0; }
+  95% { left: 0px; opacity: 1; z-index: 0; }
+  100% { left: -500px; opacity: 0; z-index: 0; }
 }
 
 .Intro button {
@@ -79,18 +169,30 @@ header nav ul li {
   font-weight: 500;
   font-size: 1em;
   color: white;
-  position: absolute;
   padding: 1em 3em 1em 3em;
-  top: 45em;
   box-shadow: 2px 2px 4px #000000;
+  margin-top: 4em;
+}
+
+.Intro button:hover {
+  background-color: #367BBF;
+  cursor: pointer;
+  box-shadow: none;
 }
 
 #Reserveren {
-  left: 35%;
+  margin-right: 2em;
 }
 
 #Bestellen {
-  right: 35%;
+  margin-left: 2em;
+}
+
+.Arrow {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  bottom: 100px;
 }
 
 /***************/
@@ -98,41 +200,38 @@ header nav ul li {
 /***************/
 
 #Bieren {
-  position: relative;
+  background-image: url("../images/WispeMockup.jpg");
+  background-size: cover;
+  background-position: 50%;
+  width: 100.5vw;
+  height: 95vh;
+  margin-left: -1em;
+  margin-top: -2.4em;
+  display: flex;
 }
 
 #Bieren article {
-  position: absolute;
-  top: 10em;
-  left: 10em;
   background-color: white;
-  width: 35em;
+  width: 30em;
   height: 35em;
   border-radius: 2em;
+  margin-left: 15%;
+  margin-top: 8%;
 }
 
 #Bieren h2 {
   text-transform: uppercase;
   font-weight: 600;
-  text-decoration: underline;
   margin-left: 40px;
-  font-size: 2.5em;
+  font-size: 40px;
 }
 
 #Bieren p {
   font-weight: 300;
-  font-size: 1.4em;
+  font-size: 20px;
   margin-left: 40px;
   margin-right: 40px;
   margin-top: -15px;
-}
-
-#Bieren img {
-  width: 100.5vw;
-  height: 95vh;
-  object-fit: cover;
-  margin-left: -1em;
-  margin-top: -.5em;
 }
 
 /******************/
@@ -140,41 +239,40 @@ header nav ul li {
 /******************/
 
 #Brouwerij {
-  position: relative;
+  background-image: url("../images/Kerk.jpg");
+  background-size: cover;
+  background-position: 50%;
+  width: 100.5vw;
+  height: 95vh;
+  margin-left: -1em;
+  margin-top: -2.4em;
+  display: flex;
 }
 
 #Brouwerij article {
-  position: absolute;
-  top: 7em;
-  right: 10em;
   background-color: white;
-  width: 35em;
-  height: 43em;
+  width: 30em;
+  height: 40em;
   border-radius: 2em;
+  margin-left: 60%;
+  margin-right: 20px;
+  margin-top: 6%;
+  overflow: hidden;
 }
 
 #Brouwerij h2 {
   text-transform: uppercase;
   font-weight: 600;
-  text-decoration: underline;
   margin-left: 40px;
-  font-size: 2.5em;
+  font-size: 40px;
 }
 
 #Brouwerij p {
   font-weight: 300;
-  font-size: 1.4em;
+  font-size: 20px;
   margin-left: 40px;
   margin-right: 40px;
   margin-top: -15px;
-}
-
-#Brouwerij img {
-  width: 100.5vw;
-  height: 95vh;
-  object-fit: cover;
-  margin-left: -1em;
-  margin-top: -.5em;
 }
 
 /***********/
@@ -186,7 +284,6 @@ main > img {
   height: 500px;
   object-fit: contain;
   margin-left: -1em;
-  margin-top: -.5em;
 }
 
 /****************/
@@ -194,51 +291,83 @@ main > img {
 /****************/
 
 #Verhaal {
-  position: relative;
+  background-image: url("../images/Verhaal.jpg");
+  background-size: cover;
+  background-position: 50%;
+  width: 100.5vw;
+  height: 95vh;
+  margin-left: -1em;
+  display: flex;
 }
 
 #Verhaal article {
-  position: absolute;
-  top: 7em;
-  left: 10em;
   background-color: white;
-  width: 35em;
-  height: 43em;
+  width: 30em;
+  height: 40em;
   border-radius: 2em;
+  margin-left: 15%;
+  margin-top: 5%;
 }
 
 #Verhaal h2 {
   text-transform: uppercase;
   font-weight: 600;
-  text-decoration: underline;
   margin-left: 40px;
-  font-size: 2.5em;
+  font-size: 40px;
 }
 
 #Verhaal p {
   font-weight: 300;
-  font-size: 1.4em;
+  font-size: 20px;
   margin-left: 40px;
   margin-right: 40px;
   margin-top: -15px;
-}
-
-#Verhaal img {
-  width: 100.5vw;
-  height: 95vh;
-  object-fit: cover;
-  margin-left: -1em;
-  margin-top: -.5em;
 }
 
 /****************/
 /* Onze Socials */
 /****************/
 
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 footer h2 {
   text-transform: uppercase;
   font-weight: 600;
-  text-decoration: underline;
-  font-size: 2.5em;
+  font-size: 40px;
   text-align: center;
+  flex-basis: 100%;
+}
+
+.Socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 400px;
+}
+
+#Facebook {
+  flex-basis: 80%;
+}
+
+#Twitter {
+  flex-basis: 20%;
+}
+
+#Instagram {
+  flex-basis: 80%;
+}
+
+#YouTube {
+  flex-basis: 20%;
+}
+
+footer a img {
+  width: 50px;
+  height: 50px;
 }
